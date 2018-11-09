@@ -1,0 +1,9 @@
+{
+  "animals": [
+    { "id": 1, "name": "daisy", "farm_id": 1 },
+    { "id": 2, "name": "misty", "farm_id": 1 },
+    { "id": 3, "name": "jim", "farm_id": 1 },
+    { "id": 4, "name": "harry", "farm_id": 2 },
+    { "id": 5, "name": "kim", "farm_id": 2 }
+  ]
+}
