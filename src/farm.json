@@ -1,0 +1,20 @@
+{
+  "farms": [
+    {
+      "id": 1,
+      "name": "my farm",
+      "date": "2018-01-01",
+      "animals": [
+        { "id": 1, "name": "daisy" },
+        { "id": 2, "name": "misty" },
+        { "id": 3, "name": "jim" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "his farm",
+      "date": "2018-02-01",
+      "animals": [{ "id": 4, "name": "harry" }, { "id": 5, "name": "kim" }]
+    }
+  ]
+}
