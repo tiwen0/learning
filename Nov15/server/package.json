@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "delete": "rimraf dist",
+    "build": "npm run delete && tsc -p .",
+    "db:migrate": "npm run build && node dist/db/migration/migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.6.1",
+    "sequelize": "^4.41.2",
+    "umzug": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/sequelize": "^4.27.30",
+    "@types/umzug": "^2.2.0",
+    "rimraf": "^2.6.2"
+  }
+}
