@@ -1,4 +1,4 @@
-import { IAnimal, AnimalRest } from "./Animal";
+import { AnimalRest } from "./Animal";
 import {
   RestDomain,
   Link,
@@ -6,6 +6,7 @@ import {
   Relationship,
   CollectionRepresentation
 } from "@licnz/rest";
+import { TransitiveHydrator } from "./Store";
 
 // export interface IFarm {
 //   id: number;
@@ -14,12 +15,10 @@ import {
 //   animals: Array<IAnimal>;
 // }
 
-export class FarmRest extends RestDomain {
-  public size: number;
-  public long: number;
-  public lat: number;
-
-  // public animals: CollectionRepresentation<AnimalRest>;
+export class FarmRest extends RestDomain implements TransitiveHydrator {
+  public name: string;
+  public date: Date;
+  public animals: CollectionRepresentation<AnimalRest>;
 
   constructor(links: Link[], rest: Rest) {
     super(links, rest);
@@ -29,24 +28,18 @@ export class FarmRest extends RestDomain {
     return new FarmRest(links, rest);
   }
 
-  // protected hydratedTransitively(): Promise<any> {
-  //   return this.hydrateRelationships([AnimalRest.animal_], {
-  //     transitivehydrate: true,
-  //     alsoHydrateChildre: true
-  //   });
-  // }
+  hydrateTransitively(): Promise<any> {
+    return this.hydrateRelationships([this.animal_], {
+      transitiveHydrate: true,
+      alsoHydrateChildren: true
+    });
+  }
 
-  // public static getFarms = (
-  //   farms: CollectionRepresentation<FarmRest>
-  // ): Array<IFarm> => {
-  //   return farms.items.map(
-  //     farm =>
-  //       ({
-  //         id: farm.id,
-  //         name: farm.name,
-  //         date: farm.date,
-  //         animals: []
-  //       } as IFarm)
-  //   );
-  // };
+  public animal_: Relationship = {
+    make: () => AnimalRest.make,
+    name: "animals",
+    optional: false,
+    relationship: "animals",
+    toMany: true
+  };
 }

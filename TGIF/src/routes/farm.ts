@@ -17,6 +17,10 @@ router.get("/", (req, res) => {
         {
           rel: "self",
           href: "/farms"
+        },
+        {
+          rel: "up",
+          href: "/"
         }
       ],
       new Uri("/farms/:id", "farm")

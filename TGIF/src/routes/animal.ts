@@ -13,7 +13,13 @@ router.get("/", (req, res) => {
     maker.makeFeedRepresentation(
       data.animals,
       "name",
-      [{ rel: "self", href: "/animals" }],
+      [
+        { rel: "self", href: "/animals" },
+        {
+          rel: "up",
+          href: "/"
+        }
+      ],
       new Uri("/animals/:id", "animal")
     )
   );
