@@ -40,14 +40,16 @@ let stringSet = new Set([{
     value: "tianna"
 }]);
 
-// console.log([...mySet])
+// console.log(numberSet)
+// lol()
+// console.log([...numberSet])
 
 // 1. Search/Find
 const setFind = () => {
-    let id = 6
+    let id = 1
     let findObject = [...numberSet].find(object => object.id === id)
 
-    console.log("My set:")
+    console.log("Number Set:")
     console.log(numberSet)
     lol()
 
@@ -55,7 +57,7 @@ const setFind = () => {
     lol()
 }
 
-// setFind()
+setFind()
 
 // 2. Sort
 let sortSet = () => {

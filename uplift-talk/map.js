@@ -18,19 +18,21 @@ let stringMap = new Map([
     ["five", "six"]
 ])
 
-lol()
+// for (let entry of numberMap) {
+//     console.log(entry)
+// }
 
 // 1. Search/Find
 let findByKey = (key, map) => map.get(key)
 
 let findByNumberKey = () => {
-    let key = 1111
+    let key = 54
     console.log(`When key = ${key}, the value is "${findByKey(key, numberMap)}"`)
     lol()
 }
 
 let findByStringKey = () => {
-    let key = "two"
+    let key = "zero"
     console.log(`When key = ${key}, the value is "${findByKey(key, stringMap)}"`)
     lol()
 }
@@ -44,7 +46,7 @@ let findByStringKey = () => {
 let sortMap = () => {
     console.log("Original map:")
     console.log(stringMap)
-    let sortedMap = new Map([...stringMap.entries()].sort())
+    let sortedMap = new Map([...stringMap].sort())
     console.log("Sorted map:")
     console.log(sortedMap)
     lol()

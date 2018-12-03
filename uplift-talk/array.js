@@ -19,7 +19,7 @@ let objectArr = [{
 
 let stringArr = ["red", "orange", "yellow", "black", "green"]
 
-let numberArr = [988, 23, 2345, -1, 6442, 0, 33, 7777, -999999]
+let numberArr = [988, 23, 2345, -1, -1, 6442, 0, 33, 7777, -999999]
 
 // 1. Search/Find
 const arrayFind = () => {
@@ -47,6 +47,7 @@ const arraySortString = () => {
 const arraySortNumber = () => {
     console.log("Original array:", numberArr)
 
+    // let sortedArr = numberArr.sort()
     let sortedArr = numberArr.sort((a, b) => a - b)
     console.log("Sorted array:", sortedArr)
     lol()
