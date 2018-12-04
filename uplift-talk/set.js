@@ -1,6 +1,6 @@
-const lol = () => console.log("------------------------------------------------------------------------------")
+// 1. Search/Find
 
-let numberSet = new Set([{
+let set1 = new Set([{
     id: 1,
     value: "cow"
 }, {
@@ -20,7 +20,10 @@ let numberSet = new Set([{
     value: "tianna"
 }]);
 
-let stringSet = new Set([{
+
+// 2. Sort
+
+let set2 = new Set([{
     id: "t",
     value: "cow"
 }, {
@@ -40,41 +43,12 @@ let stringSet = new Set([{
     value: "tianna"
 }]);
 
-// console.log(numberSet)
-// lol()
-// console.log([...numberSet])
-
-// 1. Search/Find
-const setFind = () => {
-    let id = 1
-    let findObject = [...numberSet].find(object => object.id === id)
-
-    console.log("Number Set:")
-    console.log(numberSet)
-    lol()
-
-    console.log(`When id = ${id}, the value is "${findObject.value}"`)
-    lol()
-}
-
-setFind()
-
-// 2. Sort
-let sortSet = () => {
-    console.log("Original set:")
-    console.log(stringSet)
-    let sortedSet = new Set([...stringSet].sort((a, b) => a['id'].localeCompare(b['id'])))
-    console.log("Sorted set:")
-    console.log(sortedSet)
-    lol()
-}
-
-// sortSet()
 
 // 3. Remove Duplicates
-const mySet = new Set([1, 2, 2, 4, 5, 5]);
 
-const objectSet = new Set([{
+let set3 = new Set([1, 2, 2, 4, 5, 5]);
+
+let set4 = new Set([{
     id: "w",
     value: "cow"
 }, {
@@ -87,11 +61,3 @@ const objectSet = new Set([{
     id: "h",
     value: "monkey"
 }]);
-
-let removeDuplicates = (set) => {
-    console.log(set);
-}
-
-// removeDuplicates(mySet)
-
-// removeDuplicates(objectSet)
