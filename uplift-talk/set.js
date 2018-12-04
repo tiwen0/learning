@@ -1,4 +1,4 @@
-// 1. Search/Find
+// 1. Search
 
 let set1 = new Set([{
     id: 1,

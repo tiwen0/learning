@@ -1,4 +1,4 @@
-// 1. Search/Find
+// 1. Search
 
 let arr1 = [{
     id: 1,

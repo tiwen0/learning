@@ -1,4 +1,4 @@
-// 1. Search/Find
+// 1. Search
 
 let map1 = new Map([
     [0, "zero"],
